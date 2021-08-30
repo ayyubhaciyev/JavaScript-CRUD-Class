@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS - Class</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<body class="container">
+    
+<h1 class="display-4 text-center title"></h1>
+<div class="float-right">
+    <button class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#addEmp">Əlavə Et</button>
+</div>
+<table class="table table-hoverable"></table>
+
+
+
+
+<div class="modal fade" id="addEmp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Yeni İşçi</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="alert alert-danger" style="display:none;" role="alert">
+                Xəta baş verib! Yenidən Cəhd edin!
+              </div>
+            <div class="form-group">
+              <label for="user-name" class="col-form-label">Ad Soyad:</label>
+              <input type="text" class="form-control" id="user-name">
+            </div>
+            <div class="form-group">
+                <label for="user-position" class="col-form-label">Vəzifə:</label>
+                <input type="text" class="form-control" id="user-position">
+              </div>
+              <div class="form-group">
+                <label for="user-salary" class="col-form-label">Maaş:</label>
+                <input type="number" step="0.01" class="form-control" id="user-salary">
+              </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Bağla</button>
+          <button type="button"  class="btn btn-primary add-data">Əlavə Et</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="editEmp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">İşçi Yenilə</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <input type="hidden"  id="edit-id" value="" />
+            <div class="alert alert-danger" style="display:none;" role="alert">
+                Xəta baş verib! Yenidən Cəhd edin!
+              </div>
+            <div class="form-group">
+              <label for="edit-user-name" class="col-form-label">Ad Soyad:</label>
+              <input type="text" class="form-control" id="edit-user-name">
+            </div>
+            <div class="form-group">
+                <label for="edit-user-position" class="col-form-label">Vəzifə:</label>
+                <input type="text" class="form-control" id="edit-user-position">
+              </div>
+              <div class="form-group">
+                <label for="edit-user-salary" class="col-form-label">Maaş:</label>
+                <input type="number" step="0.01" class="form-control" id="edit-user-salary">
+              </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Bağla</button>
+          <button type="button"  class="btn btn-primary edit-data">Redaktə Et</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="js/company.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
